@@ -1,0 +1,326 @@
+@import url("./reset.css");
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+  font-size: 14px;
+  color: #333;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.menu--title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.btn--blue {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  font-weight: 700;
+  background-color: #6e84db;
+  color: #fff;
+  cursor: pointer;
+}
+
+.input--default {
+  box-sizing: border-box;
+  padding: 6px 10px;
+  border: 1px solid #aaa;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  font-size: 14px;
+}
+
+/* 로그인창 */
+#login {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+}
+
+#login .login__wrap {
+  width: 20%;
+  padding: 30px;
+  text-align: center;
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#login .login__img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+  font-size: 40px;
+  color: #fff;
+  background-color: #6e84db;
+  border-radius: 50%;
+  line-height: 1.5;
+}
+
+#login .login__wrap>h2 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #414864;
+}
+
+#login .login__form {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.login__form .form {
+  padding: 8px 16px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 18px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.login__form .login__input {
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.login__form .login__submit {
+  text-transform: uppercase;
+  background-color: #6e84db;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* 최상단 정보표시줄 */
+#info-bar {
+  text-align: center;
+  padding: 8px 0;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+#info-bar #clock {
+  color: #fff;
+}
+
+/* 컨텐츠 레이아웃 */
+#container {
+  width: 80%;
+  height: 60%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(200px, auto);
+  grid-auto-columns: minmax(200px, auto);
+  gap: 10px;
+}
+
+.container__item {
+  padding: 20px;
+  text-align: center;
+  color: #333;
+  background-color: rgba(255, 255, 255, .9);
+  border-radius: 20px;
+  line-height: 1.2;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.container__item:nth-child(3) {
+  grid-row: 1 / 3;
+  grid-column: 3 / 4;
+}
+
+/* 사용자 프로필 */
+#user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 16px;
+}
+
+#user-info .user__pic {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background-image: url(../images/profile.jpeg);
+  background-size: contain;
+  background-position: center center;
+}
+
+#user-info .greeting {
+  padding: 4px 10px;
+  text-align: center;
+  word-break: keep-all;
+}
+
+/* 디데이 계산기 */
+#dday-wrap {}
+
+#dday-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+#dday-form .dday__input {
+  height: 36px;
+  font-size: 14px;
+  border-radius: 4px 0 0 4px;
+  color: #555;
+  outline: none;
+}
+
+#dday-form .dday__submit {
+  height: 36px;
+}
+
+.dday__result {
+  font-size: 16px;
+}
+
+/* to-do-list */
+#todo-wrap {}
+
+#todo-form {
+  box-sizing: border-box;
+  display: flex;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+#todo-form .todo__input {
+  flex-grow: 1;
+}
+
+#todo-form .todo__input:focus {
+  outline: none;
+}
+
+#todo-form .todo__submit {
+  width: 40px;
+  font-size: 20px;
+}
+
+#todo-list {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+#todo-list>li {
+  display: flex;
+  position: relative;
+  align-content: center;
+  padding: 10px 4px;
+  cursor: pointer;
+}
+
+#todo-list>li>span {
+  position: relative;
+  font-size: 16px;
+}
+
+#todo-list>li>span::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  visibility: hidden;
+  width: 0;
+  height: 2px;
+  background-color: rgba(229, 98, 98, 0.6);
+  transition: all .15s linear;
+}
+#todo-list>li>span.line-through::before {
+  visibility: visible;
+  width: 100%;
+}
+
+#todo-list>li>button {
+  position: absolute;
+  top: 6px;
+  right: 4px;
+  display: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: none;
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  color: #6e84db;
+  cursor: pointer;
+}
+
+#todo-list>li:hover button {
+  display: inline;
+}
+
+/* 랜덤 명언 */
+#wise-saying {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  word-break: keep-all;
+  line-height: 1.4;
+}
+
+#wise-saying .saying {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+#wise-saying .author {
+  font-size: 14px;
+}
+
+#wise-saying .refresh-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  color: #666;
+}
+
+/* 날씨정보 */
+#weather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#weather .weather__city {
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+#weather .weather__temp {
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+#weather .weather__sky {
+  font-size: 26px;
+}
